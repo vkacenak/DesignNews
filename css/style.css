@@ -1,0 +1,307 @@
+/*************** Primary colors ***************/
+:root {
+    --color-primary-red: #FF5353;
+    --color-secondary-red: #FA7373;
+  
+    --background-color: #F7F7F7;
+  
+    --color-red:#FF4C4C;
+    --color-yellow: #FFD800;
+    --color-blue: #0076FF;
+    --color-green: #008800;
+    --color-violet: #8671DE;
+  }
+  
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden; 
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+}
+
+
+/*************** Navbar ***************/
+
+.desktop-nav {
+    background-color: white;
+    width: 100%;
+    height: 10rem;
+    position: relative;
+    overflow: hidden;
+    
+}
+.burger {
+    display: none;
+}
+.desktop-nav > * {
+    display: inline-block;
+}
+.desktop-nav__left {
+    position: absolute;
+    left: 5rem;
+    top:3.5rem;
+    float: left;
+    
+}
+.desktop-nav__left img {
+    width:118px;
+}
+.desktop-nav__right {
+    float: right;
+    line-height: 7;
+}
+.desktop-nav__right a {
+    color: var(--color-primary-red);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.5rem; 
+    
+}
+.desktop-nav__right img {
+    width:26px;
+    margin-right: 5rem;
+    position: absolute;
+    top: 35.5px;
+    right: 0;
+    
+}
+.button-subscribe {
+    background-color: var(--color-primary-red);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    padding:1rem 3rem;
+    border-radius: 19px;
+    border: none;
+    margin-left: 2.5rem;
+    margin-right: 14rem;
+    /*add drop shadow*/
+}
+.desktop-nav-articles {
+    width: 100%;
+    height: 50px;
+    font-size: 0;
+    background-color: white;
+    line-height: 3;
+}
+.desktop-nav-articles a {
+    color: black;
+    height: 50px;
+    font-size: 1.5rem;
+    display: inline-block;
+    width: 20%;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+.desktop-nav-articles a:nth-of-type(1) {
+    border-bottom: solid 6.5px var(--color-red);
+}
+.desktop-nav-articles a:nth-of-type(2) {
+    border-bottom: solid 6.5px var(--color-yellow);
+}
+.desktop-nav-articles a:nth-of-type(3) {
+    border-bottom: solid 6.5px var(--color-blue);
+}
+.desktop-nav-articles a:nth-of-type(4) {
+    border-bottom: solid 6.5px var(--color-green);
+}
+.desktop-nav-articles a:nth-of-type(5) {
+    border-bottom: solid 6.5px var(--color-violet);
+}
+.mobile-nav-line {
+    display: none;
+}
+
+@media all and (max-width:750px) {
+    .burger {
+        display: inline-block;
+        width: 75px;
+        height: 65px;
+        border-right: solid .1px #D1D1D1;
+        position: fixed;
+        
+    }
+    .burger__menu {
+        position: absolute;
+        left: 17.5px;
+        top: 17.5px;
+    }
+    .burger__menu--line {
+        
+        width: 28px;
+        height: 2px;
+        background-color: black;
+        margin: .6rem;
+        border-radius: 3px;
+    }
+    .desktop-nav {
+        height: 65px;
+        border-bottom: solid .1px #D1D1D1;
+        position: fixed;
+        z-index: 10;
+    }
+    .desktop-nav__right a {
+        display: none;
+}
+.desktop-nav__right button {
+    display: none;
+}
+.desktop-nav__right img {
+    top: 22px;
+    width: 21px;
+    margin-right: 2.5rem;
+}
+.desktop-nav__left {
+    left: 50%;
+    top: 22px;
+    margin-left: -45px;
+   
+}
+.desktop-nav__left img {
+    width: 90px;
+}
+.desktop-nav-articles {
+    display: none;
+}
+.mobile-nav-lines {
+    position: fixed;
+    top:65px;
+    display: block;
+    width: 100%;
+    font-size: 0;
+}
+.mobile-nav-line {
+    width: 20%;
+    height: 4.5px;
+    display: inline-block;
+}
+.mobile-nav-line:nth-of-type(1){
+    background-color: var(--color-red);
+}
+.mobile-nav-line:nth-of-type(2){
+    background-color: var(--color-yellow);
+}
+.mobile-nav-line:nth-of-type(3){
+    background-color: var(--color-blue);
+}
+.mobile-nav-line:nth-of-type(4){
+    background-color: var(--color-green);
+}
+.mobile-nav-line:nth-of-type(5){
+    background-color: var(--color-violet);
+}
+.menu-revealed {
+    display: none;
+    position: fixed;
+    z-index: 11;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+.menu-revealed a {
+
+    color: var(--color-primary-red);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 2rem; 
+    position: absolute;
+    right: 3rem;
+    top: 23.5px;
+}
+.menu-revealed-menu{
+    margin-top: 15rem;
+}
+.menu-revealed h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 3.3rem;
+    margin-bottom: 2rem;
+}
+.menu-revealed-menu a{
+    position: unset;
+    display: block;
+    width: 100%;
+    height: 55px;
+    color: black;
+    border-top: solid .1px #D1D1D1;
+    font-size: 2rem;
+    padding-left: 2.5rem;
+    line-height: 2.7;
+}
+.menu-revealed-subscribe  {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+}
+.menu-revealed-subscribe h1 {
+    color: var(--color-primary-red);
+    display: inline-block;
+    font-size: 2.5rem;
+    width: 55%;
+    margin: 0 auto;
+}
+.menu-revealed-menu a:nth-of-type(1){
+    border-left: solid 8px var(--color-red);
+}
+.menu-revealed-menu a:nth-of-type(2){
+    border-left: solid 8px var(--color-yellow);
+}
+.menu-revealed-menu a:nth-of-type(3){
+    border-left: solid 8px var(--color-blue);
+}
+.menu-revealed-menu a:nth-of-type(4){
+    border-left: solid 8px var(--color-green);
+}
+.menu-revealed-menu a:nth-of-type(5){
+    border-left: solid 8px var(--color-violet);
+    border-bottom: solid .1px #D1D1D1;
+}
+#menu-subscribe {
+    display: block;
+    margin: 0 auto;
+    margin-top: 4.5rem;
+    font-size: 2rem;
+    padding:1.5rem 4rem;
+    border-radius: 28px;
+}
+.menu-revealed-close {
+    display: inline-block;
+    width: 75px;
+    height: 65px;
+    border-right: solid .1px #D1D1D1;
+    border-bottom: solid .1px #D1D1D1;
+    position: fixed;
+}
+.menu-revealed-close-lines {
+    position: absolute;
+        left: 17.5px;
+        top: 17.5px;
+}
+.menu-revealed-close-lines {
+width: 28px;
+height: 2px;
+background-color: black;
+
+border-radius: 3px;
+}
+.menu-revealed-close-lines:nth-of-type(1) {
+    transform: rotate(45deg);
+}
+.menu-revealed-close-lines:nth-of-type(2) {
+    transform: rotate(-45deg);
+}
+}
