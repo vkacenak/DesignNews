@@ -144,6 +144,19 @@ input:focus {
     /*add drop shadow*/
 }
 
+.button-subscribe:hover {
+    background-color: var(--color-primary-red);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 19px;
+    border: none;
+    margin-left: 2.5rem;
+    margin-right: 14rem;
+    /*add drop shadow*/
+}
+
 .desktop-nav-articles {
     width: 100%;
     height: 50px;
@@ -502,8 +515,8 @@ input:focus {
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.082);
 }
 
-.article-home:hover{
-    transform: scale(1.05); 
+.article-home:hover {
+    transform: scale(1.05);
     box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.096);
 }
 
@@ -693,21 +706,26 @@ footer {
 }
 
 .footer__sitemap {
-    padding: 7% 10%;
-    padding-bottom: 2%;
+    padding: 4% 10% 2% 10%;
     grid-area: a1;
     width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "a1 a2""a3 a3";
 }
 
 .footer__sitemap h1 {
     font-size: 3.3em;
     font-weight: 700;
+    padding-bottom: 3%;
 }
 
 .footer__sitemap__nav {
     width: 100%;
-    padding: 5% 0 8% 0;
-    width: 100%;
+    padding: 5% 0;
+    width: 70%;
+    margin: 0 auto;
+    grid-area: a1;
 }
 
 .footer__sitemap__nav a {
@@ -747,10 +765,39 @@ footer {
     border-left-width: 20px;
 }
 
-.footer__sitemap img {
+.footer__sitemap__follow {
+    width: 70%;
+    padding: 5% 0;
+    margin: 0 auto;
+    grid-area: a2;
+}
+
+.footer__sitemap__follow__icons {
+    width: 100%;
+    padding: 5% 35% 0 0;
+}
+
+.footer__sitemap__follow__icons img {
+    padding: 6% 10%;
+    padding-left: 0;
+    float: left;
+    margin: 0;
+    width: 50%;
+    transition: 0.15s ease-in-out;
+}
+
+.footer__sitemap__follow__icons img:hover {
+    transform: scale(1.2);
+}
+
+
+
+.footer__sitemap>img {
+    grid-area: a3;
     display: block;
-    width: 20%;
+    width: 30%;
     margin: auto;
+    margin-bottom: 3rem;
 }
 
 .footer__newsletter {
@@ -806,20 +853,6 @@ footer {
         width: 70%;
     }
 
-    .footer__sitemap img {
-        width: 40%;
-        margin: 5% auto;
-    }
-
-    .footer__sitemap__nav a {
-        font-size: 1.75rem;
-    }
-
-    .footer__sitemap h1 {
-        padding-top: 15%;
-        font-size: 3rem;
-    }
-
     .newsletter__email {
         font-size: 2rem;
         font-weight: 300;
@@ -845,6 +878,45 @@ footer {
     .newsletter__button-subscribe {
         font-size: 1rem;
     }
+
+    /* SITEMAP */
+
+    .footer__sitemap {
+        grid-template-columns: 100%;
+        grid-template-areas: "a1""a2""a3";
+    }
+
+    .footer__sitemap__nav {
+        width: 100%;
+    }
+
+    .footer__sitemap>img {
+        width: 40%;
+        margin: 5% auto 10% auto;
+    }
+
+    .footer__sitemap__nav a {
+        font-size: 2rem;
+    }
+
+    .footer__sitemap h1 {
+        padding-top: 15%;
+        font-size: 3rem;
+    }
+
+    .footer__sitemap__follow {
+        padding: 0 0 15% 0;
+        width: 100%;
+    }
+
+    .footer__sitemap__follow__icons {
+        padding: 2% 6%;
+    }
+
+    .footer__sitemap__follow__icons img {
+        padding: 6% 3%;
+        width: 25%;
+    }
 }
 
 /* OTHER ARTICLES */
@@ -860,8 +932,8 @@ footer {
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.082);
 }
 
-.article:hover{
-    transform: scale(1.05); 
+.article:hover {
+    transform: scale(1.05);
 }
 
 .article img {
@@ -908,7 +980,7 @@ footer {
     justify-content: center;
     display: flex;
     top: 30%;
-    
+
 }
 
 .header_creativity {
@@ -936,7 +1008,7 @@ footer {
 
 
 .article-content img {
-    margin: 2.3rem 0 0 2.3rem;
+    padding: 2.3rem;
     width: 100%;
 }
 
@@ -945,8 +1017,6 @@ footer {
     margin: 6rem 0 5rem 2.3rem;
     border-left: 1rem solid var(--color-blue);
     padding: 1rem 2rem;
-
-
 }
 
 .article-content__heading {
@@ -960,9 +1030,19 @@ footer {
     font-size: 1.75rem;
     font-weight: 400;
     color: #8E8D8D;
-
 }
 
 
+@media all and (max-width:767px) {
+    .article-content__info {
+        margin: 3rem 0 1rem 2.3rem;
+    }
 
+    .article-content__heading {
+        font-size: 2.5rem;
+    }
 
+    .article-content__author {
+        font-size: 1.5rem;
+    }
+}
