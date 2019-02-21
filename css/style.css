@@ -51,7 +51,9 @@ body {
         /*1 rem = 8px */
     }
 }
-
+.menu-revealed {
+    display: none;
+}
 
 
 
@@ -142,6 +144,7 @@ body {
     font-weight: 700;
     text-align: center;
     margin: 0;
+    transition: all .1s linear;
 }
 
 .desktop-nav-articles a:nth-of-type(1) {
@@ -164,7 +167,36 @@ body {
     border-bottom: solid 6.5px var(--color-violet);
 }
 
+
+.desktop-nav-articles a:nth-of-type(1):hover {
+    border-bottom: solid 10.5px var(--color-red);
+    color: var(--color-red);
+}
+.desktop-nav-articles a:nth-of-type(2):hover {
+    border-bottom: solid 10.5px var(--color-yellow);
+    color: var(--color-yellow);
+}
+.desktop-nav-articles a:nth-of-type(3):hover {
+    border-bottom: solid 10.5px var(--color-blue);
+    color: var(--color-blue);
+}
+.desktop-nav-articles a:nth-of-type(4):hover {
+    border-bottom: solid 10.5px var(--color-green);
+    color: var(--color-green);
+}
+.desktop-nav-articles a:nth-of-type(5):hover {
+    border-bottom: solid 10.5px var(--color-violet);
+    color: var(--color-violet);
+}
+
+
 .mobile-nav-line {
+    display: none;
+}
+.menu-revealed-subscribe {
+    display: none;
+}
+.menu-revealed-menu {
     display: none;
 }
 
@@ -178,10 +210,17 @@ body {
         width: 75px;
         height: 65px;
         border-right: solid .1px #D1D1D1;
+        border-bottom: solid .1px #D1D1D1;
         position: fixed;
-
+        z-index: 100;
+        
     }
-
+    .desktop-nav {
+        height: 65px;
+        border-bottom: solid .1px #D1D1D1;
+        position: fixed;
+        z-index: 10;
+    }
     .burger__menu {
         position: absolute;
         left: 17.5px;
@@ -189,7 +228,7 @@ body {
     }
 
     .burger__menu--line {
-
+        transition: all .5s linear;
         width: 28px;
         height: 2px;
         background-color: black;
@@ -204,6 +243,7 @@ body {
         z-index: 10;
     }
 
+    
     .desktop-nav__right a {
         display: none;
     }
@@ -384,6 +424,29 @@ body {
     .menu-revealed-close-lines:nth-of-type(2) {
         transform: rotate(-45deg);
     }
+    .menu-revealed {
+        display: block;
+        opacity: 0;
+        transform: translateX(-900px);
+        position: fixed;
+        z-index: 10;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        transition: all .7s ease-in;
+    }
+    .menu-revealed a {
+        
+        color: var(--color-primary-red);
+        font-weight: 500;
+        font-size: 1.6rem;
+        padding-top: 3rem;
+    
+    }
+    .menu-revealed-menu{
+        margin-top: 10rem;
+        display: block;
+    }
 }
 
 /* HEADER */
@@ -507,10 +570,6 @@ body {
     display: none;
     grid-column: 2;
     color: #8E8D8D;
-    font-weight: 500;
-    font-size: 1.6rem;
-    padding-top: 3rem;
-
 }
 
 .article__text {
@@ -518,6 +577,7 @@ body {
     font-size: 1.8rem;
     font-weight: 300;
 }
+
 
 /* FEATURED BIG ARTICLE */
 @media all and (min-width:750px) {
@@ -547,7 +607,19 @@ body {
 
 .article:nth-child(2) .article__heading {
     font-size: 3.3rem;
-
+}
+.menu-revealed-subscribe  {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+}
+.menu-revealed-subscribe h1 {
+    color: var(--color-primary-red);
+    display: inline-block;
+    font-size: 2rem;
+    width: 55%;
+    margin: 0 auto;
 }
 }
 @media all and (max-width:750px) {
@@ -603,3 +675,55 @@ body {
 .article__info-art{
    border-color: var(--color-violet);
 }
+#menu-subscribe {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    padding:1.5rem 3rem;
+    border-radius: 28px;
+}
+.menu-from-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+.transition-burger-line-1 {
+    transform: translateY(8px) rotate(45deg);
+}
+.transition-burger-line-2 {
+    display: none;
+}
+.transition-burger-line-3 {
+    transform:rotate(-45deg);
+}
+
+
+
+/** .menu-revealed-close {
+    display: inline-block;
+    width: 75px;
+    height: 65px;
+    border-right: solid .1px #D1D1D1;
+    border-bottom: solid .1px #D1D1D1;
+    position: fixed;
+}
+.menu-revealed-close-lines {
+    position: absolute;
+        left: 23.5px;
+        top: 30.5px;
+}
+.menu-revealed-close-line {
+width: 28px;
+height: 2px;
+background-color: black;
+border-radius: 3px;
+margin: 0;
+font-size: 0;
+}
+.menu-revealed-close-line:nth-of-type(1) {
+    transform:translateY(2px) rotate(45deg);
+}
+.menu-revealed-close-line:nth-of-type(2) {
+    transform: rotate(-45deg);
+} */
+
