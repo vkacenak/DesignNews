@@ -30,7 +30,9 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: black;
 }
-
+.menu-revealed {
+    display: none;
+}
 
 /*************** Navbar ***************/
 
@@ -106,7 +108,9 @@ body {
     font-weight: 700;
     text-align: center;
     margin: 0;
+    transition: all .1s linear;
 }
+
 .desktop-nav-articles a:nth-of-type(1) {
     border-bottom: solid 6.5px var(--color-red);
 }
@@ -122,7 +126,36 @@ body {
 .desktop-nav-articles a:nth-of-type(5) {
     border-bottom: solid 6.5px var(--color-violet);
 }
+
+
+.desktop-nav-articles a:nth-of-type(1):hover {
+    border-bottom: solid 10.5px var(--color-red);
+    color: var(--color-red);
+}
+.desktop-nav-articles a:nth-of-type(2):hover {
+    border-bottom: solid 10.5px var(--color-yellow);
+    color: var(--color-yellow);
+}
+.desktop-nav-articles a:nth-of-type(3):hover {
+    border-bottom: solid 10.5px var(--color-blue);
+    color: var(--color-blue);
+}
+.desktop-nav-articles a:nth-of-type(4):hover {
+    border-bottom: solid 10.5px var(--color-green);
+    color: var(--color-green);
+}
+.desktop-nav-articles a:nth-of-type(5):hover {
+    border-bottom: solid 10.5px var(--color-violet);
+    color: var(--color-violet);
+}
+
 .mobile-nav-line {
+    display: none;
+}
+.menu-revealed-subscribe {
+    display: none;
+}
+.menu-revealed-menu {
     display: none;
 }
 
@@ -132,21 +165,10 @@ body {
         width: 75px;
         height: 65px;
         border-right: solid .1px #D1D1D1;
+        border-bottom: solid .1px #D1D1D1;
         position: fixed;
+        z-index: 100;
         
-    }
-    .burger__menu {
-        position: absolute;
-        left: 17.5px;
-        top: 17.5px;
-    }
-    .burger__menu--line {
-        
-        width: 28px;
-        height: 2px;
-        background-color: black;
-        margin: .6rem;
-        border-radius: 3px;
     }
     .desktop-nav {
         height: 65px;
@@ -154,6 +176,20 @@ body {
         position: fixed;
         z-index: 10;
     }
+    .burger__menu {
+        position: absolute;
+        left: 17.5px;
+        top: 17.5px;
+    }
+    .burger__menu--line {
+        transition: all .5s linear;
+        width: 28px;
+        height: 2px;
+        background-color: black;
+        margin: .6rem;
+        border-radius: 3px;
+    }
+    
     .desktop-nav__right a {
         display: none;
 }
@@ -205,15 +241,18 @@ body {
     background-color: var(--color-violet);
 }
 .menu-revealed {
-    display: none;
+    display: block;
+    opacity: 0;
+    transform: translateX(-900px);
     position: fixed;
-    z-index: 11;
+    z-index: 10;
     width: 100vw;
     height: 100vh;
     background-color: white;
+    transition: all .7s ease-in;
 }
 .menu-revealed a {
-
+    
     color: var(--color-primary-red);
     font-weight: 500;
     text-decoration: none;
@@ -223,7 +262,8 @@ body {
     top: 23.5px;
 }
 .menu-revealed-menu{
-    margin-top: 15rem;
+    margin-top: 10rem;
+    display: block;
 }
 .menu-revealed h2 {
     text-transform: uppercase;
@@ -243,14 +283,15 @@ body {
     line-height: 2.7;
 }
 .menu-revealed-subscribe  {
+    display: block;
     width: 100%;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 .menu-revealed-subscribe h1 {
     color: var(--color-primary-red);
     display: inline-block;
-    font-size: 2.5rem;
+    font-size: 2rem;
     width: 55%;
     margin: 0 auto;
 }
@@ -273,12 +314,28 @@ body {
 #menu-subscribe {
     display: block;
     margin: 0 auto;
-    margin-top: 4.5rem;
-    font-size: 2rem;
-    padding:1.5rem 4rem;
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    padding:1.5rem 3rem;
     border-radius: 28px;
 }
-.menu-revealed-close {
+.menu-from-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+.transition-burger-line-1 {
+    transform: translateY(8px) rotate(45deg);
+}
+.transition-burger-line-2 {
+    display: none;
+}
+.transition-burger-line-3 {
+    transform:rotate(-45deg);
+}
+
+
+
+/** .menu-revealed-close {
     display: inline-block;
     width: 75px;
     height: 65px;
@@ -288,20 +345,21 @@ body {
 }
 .menu-revealed-close-lines {
     position: absolute;
-        left: 17.5px;
-        top: 17.5px;
+        left: 23.5px;
+        top: 30.5px;
 }
-.menu-revealed-close-lines {
+.menu-revealed-close-line {
 width: 28px;
 height: 2px;
 background-color: black;
-
 border-radius: 3px;
+margin: 0;
+font-size: 0;
 }
-.menu-revealed-close-lines:nth-of-type(1) {
-    transform: rotate(45deg);
+.menu-revealed-close-line:nth-of-type(1) {
+    transform:translateY(2px) rotate(45deg);
 }
-.menu-revealed-close-lines:nth-of-type(2) {
+.menu-revealed-close-line:nth-of-type(2) {
     transform: rotate(-45deg);
-}
+} */
 }
