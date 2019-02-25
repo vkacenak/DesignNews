@@ -11,63 +11,64 @@
 
 <body>
     <header>
-        <nav class="desktop-nav">
-            <div class="desktop-nav__left">
-                <img src="img/navbar/logo.png" alt="Design News">
-
-            </div>
-            <div class="burger">
-                <div class="burger__menu">
-                    <div class="burger__menu--line"></div>
-                    <div class="burger__menu--line"></div>
-                    <div class="burger__menu--line"></div>
-                </div>
-            </div>
-            <div class="desktop-nav__right">
-                <a href="#">Log in</a>
-                <button class="button-subscribe">Subscribe now</button>
-                <img src="img/navbar/search.png" alt="search" ">
-        </div>
-        </nav>
-        <div class="
-                    desktop-nav-articles">
-                <a href="index.html">Home</a>
-                <a href="visual_design.html">Visual Design</a>
-                <a href="creativity.html">Creativity</a>
-                <a href="ux.html">UX</a>
-                <a href="art.html">Art</a>
-            </div>
-            <div class="mobile-nav-lines">
-                <div class="mobile-nav-line"></div>
-                <div class="mobile-nav-line"></div>
-                <div class="mobile-nav-line"></div>
-                <div class="mobile-nav-line"></div>
-                <div class="mobile-nav-line"></div>
-            </div>
-            <div class="menu-revealed">
-                <div class="menu-revealed-close">
-                    <div class="menu-revealed-close-lines">
-                        <div class="menu-revealed-close-line"></div>
-                        <div class="menu-revealed-close-line"></div>
-
+            <div class="burger" onclick="menuReveal()">
+                    <div class="burger__menu">
+                        <div id="burger-line-1" class="burger__menu--line"></div>
+                        <div id="burger-line-2" class="burger__menu--line"></div>
+                        <div id="burger-line-3" class="burger__menu--line"></div>
                     </div>
                 </div>
-                <a href="#">Log in</a>
-                <div class="menu-revealed-menu">
+        <nav class="desktop-nav">
+            <div class="desktop-nav__left">
+                <a href="index.html"><img src="img/navbar/logo.png" alt="Design News" ></a>
+            
+
+        </div>
+        
+        <div class="desktop-nav__right">
+            <a href="#">Log in</a>
+            <button class="button-subscribe">Subscribe now</button>
+            <img src="img/navbar/search.png" alt="search" ">
+        </div>
+        </nav>
+        <div class="desktop-nav-articles">
+            <a href="index.html">Home</a>
+            <a href="visual_design.html">Visual Design</a>
+            <a href="creativity.html">Creativity</a>
+            <a href="ux.html">UX</a>
+            <a href="art">Art</a>
+        </div>
+       <div class="mobile-nav-lines">
+            <div class="mobile-nav-line"></div>
+            <div class="mobile-nav-line"></div>
+            <div class="mobile-nav-line"></div>
+            <div class="mobile-nav-line"></div>
+            <div class="mobile-nav-line"></div>
+        </div> 
+        <div class="menu-revealed">
+                <div class="menu-revealed-close">
+                        <div class="menu-revealed-close-lines">
+                                <div class="menu-revealed-close-line"></div>
+                                <div class="menu-revealed-close-line"></div>
+                                
+                        </div>        
+                </div>
+            <a href="#">Log in</a>
+            <div class="menu-revealed-menu">
                     <h2>Menu</h2>
                     <a href="index.html">Home</a>
                     <a href="visual_design.html">Visual Design</a>
                     <a href="creativity.html">Creativity</a>
-                    <a href="ux.html">UX</a>
+                    <a href="ux.html">Ux</a>
                     <a href="art.html">Art</a>
-                </div>
-                <div class="menu-revealed-subscribe">
-                    <h1>Keep up with the latest news</h3>
-                        <button id="menu-subscribe" class="button-subscribe">Subscribe now</button>
-
-                </div>
-
             </div>
+            <div class="menu-revealed-subscribe">
+                    <h1>Keep up with the latest news</h3>
+                    <button id="menu-subscribe" class="button-subscribe">Subscribe now</button>
+                    
+            </div>
+            
+        </div>
             <div class="articles__header header_creativity">
                 <h1 class="articles__header__heading">Creativity</h1>
             </div>
