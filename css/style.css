@@ -1021,7 +1021,6 @@ footer {
 
 /* FEATURED BIG ARTICLE */
 @media all and (min-width:750px) {
-
 .article-home:nth-child(2) {
     grid-template-rows: 8rem 10rem 1fr;
     grid-template-columns: 27% 1fr;
@@ -1052,6 +1051,7 @@ footer {
 }
 }
 @media all and (max-width:750px) {
+
     .articles__header__heading {
         top:45%;
     }
