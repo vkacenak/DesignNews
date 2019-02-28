@@ -9,8 +9,8 @@ function menuReveal() {
 
 
 const params = new URLSearchParams(location.search)
-var articleIds = params.get('id');
-console.log(articleIds); 
+var articleId = params.get('id');
+console.log(articleIdI); 
 
 
 const section = document.querySelector("main");
@@ -18,10 +18,13 @@ const template = document.querySelector(".article-template").content;
 const imgLink = "";
 const pListLink = "";
 const articlesLink = "https://spreadsheets.google.com/feeds/list/1zV1J-ryAejwmZMSujMgOOb4eeO6ppNUm0lECjl495FU/od6/public/values?alt=json";
+
 function LoadJSON(){
     fetch(articlesLink).then(result => result.json()).then(article => article.feed.entry.forEach(displayData))
 }
-function displayData(article) {
+
+
+function displayOneArticle(article) {
 
     const clone = template.cloneNode(true);
    if (article.gsx$id.$t == articleIds){

@@ -11,173 +11,95 @@
 
 <body>
     <header>
-            <div class="burger" onclick="menuReveal()">
-                    <div class="burger__menu">
-                        <div id="burger-line-1" class="burger__menu--line"></div>
-                        <div id="burger-line-2" class="burger__menu--line"></div>
-                        <div id="burger-line-3" class="burger__menu--line"></div>
-                    </div>
-                </div>
-                <nav>
-        <div class="desktop-nav">
-            <div class="desktop-nav__left">
-                <a href="index.html"><img src="img/navbar/logo.png" alt="Design News" ></a>
-            
+        <div class="burger" onclick="menuReveal()">
+            <div class="burger__menu">
+                <div id="burger-line-1" class="burger__menu--line"></div>
+                <div id="burger-line-2" class="burger__menu--line"></div>
+                <div id="burger-line-3" class="burger__menu--line"></div>
+            </div>
+        </div>
 
-        </div>
-      
-        <div class="desktop-nav__right">
-            <a href="#">Log in</a>
-            <button class="button-subscribe">Subscribe now</button>
-            <img src="img/navbar/search.png" alt="search" ">
-        </div>
-        </div>
+        <nav>
+            <div class="desktop-nav">
+                <div class="desktop-nav__left">
+                    <a href="index.html"><img id="logo" src="img/navbar/logo.png" alt="Design News"></a>
+
+
+                </div>
+
+                <div class="desktop-nav__right">
+                    <a href="#">Log in</a>
+                    <button class="button-subscribe">Subscribe now</button>
+                    <form class="search">
+                        <input class="search__input" type="text" id="fname" name="fname" placeholder="Search">
+                    </form>
+                    <img class="searchButton" src="img/navbar/search.png" alt="search" onclick="SearchReveal()">
+                </div>
+            </div>
+        
         <div class="desktop-nav-articles">
             <a href="index.html">Home</a>
             <a href="visual_design.html">Visual Design</a>
             <a href="creativity.html">Creativity</a>
             <a href="ux.html">UX</a>
-            <a href="art">Art</a>
+            <a href="art.html">Art</a>
         </div>
     </nav>
-       <div class="mobile-nav-lines">
+        <div class="mobile-nav-lines">
             <div class="mobile-nav-line"></div>
             <div class="mobile-nav-line"></div>
             <div class="mobile-nav-line"></div>
             <div class="mobile-nav-line"></div>
             <div class="mobile-nav-line"></div>
-        </div> 
-        
+        </div>
         <div class="menu-revealed">
-                <div class="menu-revealed-close">
-                        <div class="menu-revealed-close-lines">
-                                <div class="menu-revealed-close-line"></div>
-                                <div class="menu-revealed-close-line"></div>
-                                
-                        </div>        
+            <div class="menu-revealed-close">
+                <div class="menu-revealed-close-lines">
+                    <div class="menu-revealed-close-line"></div>
+                    <div class="menu-revealed-close-line"></div>
+
                 </div>
+            </div>
             <a href="#">Log in</a>
             <div class="menu-revealed-menu">
-                    <h2>Menu</h2>
-                    <a href="index.html">Home</a>
-                    <a href="visual_design.html">Visual Design</a>
-                    <a href="creativity.html">Creativity</a>
-                    <a href="ux.html">Ux</a>
-                    <a href="art.html">Art</a>
+                <h2>Menu</h2>
+                <a href="index.html">Home</a>
+                <a href="visual_design.html">Visual Design</a>
+                <a href="creativity.html">Creativity</a>
+                <a href="ux.html">Ux</a>
+                <a href="art.html">Art</a>
             </div>
             <div class="menu-revealed-subscribe">
-                    <h1>Keep up with the latest news</h3>
+                <h1>Keep up with the latest news</h3>
                     <button id="menu-subscribe" class="button-subscribe">Subscribe now</button>
-                    
+
             </div>
-            
+
         </div>
-            <div class="header">
-                <div class="header__headings">
-                    <h1 class="header__logo">Desig<span style="color:white; font-weight:300;">news </span></h1>
-                    <h1 class="header__slogan">Coverage You <br> Can Count On</h1>
-                </div>
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+
+        </div>
+        <div class="header">
+            <div class="header__headings">
+                <h1 class="header__logo">Desig<span style="color:white; font-weight:300;">news </span></h1>
+                <h1 class="header__slogan">Coverage You <br> Can Count On</h1>
             </div>
+        </div>
     </header>
 
 
-    <main>
-        <section class="articles">
+    <main class="mainPage">
+        <section class="articles mostRecent">
             <h2 class="articles__heading">Most Recent</h2>
-            
 
-          
 
         </section>
-        <section class="articles">
+        <section class="articles mostPopular">
             <h2 class="articles__heading">Most Popular</h2>
 
-            <article class="article-home">
-                <img src="img/thumb-id-1.png" alt="">
-                <div class="article__info article__info-art">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Visual Design</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">One of the biggest questions I used to get asked by aspiring writers is how I
-                    get ideas. This tapered off after I wrote “the one process post to rule them all” (which was the
-                    goal, so… good), but the topic still pops every so often.
-
-                    To be honest, the “idea” question often seems a bit odd to me.
-                    It’s like asking, “when you’re hungry, how do you decide what to cook?” Like, I don’t know, man.
-                    You just do.
-                </p>
-
-            </article>
-
-            <article class="article-home">
-                <img src="img/thumb-id-2.png" alt="">
-                <div class="article__info article__info-art">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Visual Design</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">Letters overlap one another in the new logo for Spanish fashion retailer Zara,
-                    designed by French agency Baron & Baron, prompting criticism from fellow designers.
-                </p>
-
-            </article>
-
-            <article class="article-home">
-                <img src="img/thumb-id-3.png" alt="">
-                <div class="article__info article__info-creativity">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Visual Design</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">One of the biggest questions I used to get asked by aspiring writers is how I
-                    get ideas. This tapered off after I wrote “the one process post to rule them all” (which was the
-                    goal, so… good), but the topic still pops every so often.
-
-                    To be honest, the “idea” question often seems a bit odd to me.
-                    It’s like asking, “when you’re hungry, how do you decide what to cook?” Like, I don’t know, man.
-                    You just do.
-                </p>
-
-            </article>
-
-            <article class="article-home">
-                <img src="img/thumb-id-2.png" alt="">
-                <div class="article__info article__info-creativity">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Creativity</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">Letters overlap one another in the new logo for Spanish fashion retailer Zara,
-                    designed by French agency Baron & Baron, prompting criticism from fellow designers.
-                </p>
-
-            </article>
-
-            <article class="article-home">
-                <img src="img/thumb-id-3.png" alt="">
-                <div class="article__info article__info-creativity">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Creativity</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">What does the above art installation mean?
-
-                    To be honest, the “idea” question often seems a bit odd to me.
-                    It’s like asking, “when you’re hungry, how do you decide what to cook?” Like, I don’t know, man.
-                    You just do
-
-
-                </p>
-
-            </article>
 
         </section>
 
@@ -239,8 +161,10 @@
         <article class="article-home">
             <img src="img/thumb-id-1.png" alt="">
             <div class="article__info article__info-creativity">
-                <h3 class="article__heading">What to do to get ideas</h3>
-                <h4 class="article__category">Creativity</h4>
+                <div class="article__info__box">
+                    <h3 class="article__heading">What to do to get ideas</h3>
+                    <h4 class="article__category">Creativity</h4>
+                </div>
             </div>
             <h4 class="article__author">By Jonathan Bel</h4>
 
