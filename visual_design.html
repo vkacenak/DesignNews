@@ -20,7 +20,7 @@
                 </div>
         <nav class="desktop-nav">
             <div class="desktop-nav__left">
-                <a href="index.html"><img src="img/navbar/logo.png" alt="Design News" ></a>
+                <a href="index.html"><img id="logo" src="img/navbar/logo.png" alt="Design News" ></a>
             
 
         </div>
@@ -28,7 +28,10 @@
         <div class="desktop-nav__right">
             <a href="#">Log in</a>
             <button class="button-subscribe">Subscribe now</button>
-            <img src="img/navbar/search.png" alt="search" ">
+            <form class="search">
+                <input class="search__input" type="text" id="fname" name="fname" placeholder="Search">
+        </form>
+        <img class="searchButton" src="img/navbar/search.png" alt="search" onclick="SearchReveal()">
         </div>
         </nav>
         <div class="desktop-nav-articles">
@@ -36,7 +39,7 @@
             <a href="visual_design.html">Visual Design</a>
             <a href="creativity.html">Creativity</a>
             <a href="ux.html">UX</a>
-            <a href="art">Art</a>
+            <a href="art.html">Art</a>
         </div>
        <div class="mobile-nav-lines">
             <div class="mobile-nav-line"></div>
@@ -69,7 +72,13 @@
             </div>
             
         </div>
-            <div class="articles__header header_visual_design">
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+                
+   </div>
+            <div class="articles__header header_visual-design">
                 <h1 class="articles__header__heading">Visual Design</h1>
             </div>
     </header>
@@ -78,110 +87,6 @@
     <main>
         <section class="articles">
             <h2 class="articles__heading">Most Recent</h2>
-
-            <article onclick="location.href='article.html'" class="article">
-                <img src="img/thumb-id-1.png" alt="">
-                <div class="article__info article__info-creativity">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Creativity</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">One of the biggest questions I used to get asked by aspiring writers is how I
-                    get ideas. This tapered off after I wrote “the one process post to rule them all” (which was the
-                    goal, so… good), but the topic still pops every so often.
-
-                    To be honest, the “idea” question often seems a bit odd to me.
-                    It’s like asking, “when you’re hungry, how do you decide what to cook?” Like, I don’t know, man.
-                    You just do.
-                </p>
-
-            </article>
-
-            <article onclick="location.href='article.html'" class="article">
-                <img src="img/thumb-id-2.png" alt="">
-                <div class="article__info article__info-creativity">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Creativity</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">Letters overlap one another in the new logo for Spanish fashion retailer Zara,
-                    designed by French agency Baron & Baron, prompting criticism from fellow designers.
-                </p>
-
-            </article>
-
-            <article onclick="location.href='article.html'" class="article">
-                <img src="img/thumb-id-3.png" alt="">
-                <div class="article__info article__info-creativity">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Creativity</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">What does the above art installation mean?
-
-                    To be honest, the “idea” question often seems a bit odd to me.
-                    It’s like asking, “when you’re hungry, how do you decide what to cook?” Like, I don’t know, man.
-                    You just do
-
-
-                </p>
-
-            </article>
-
-            <article onclick="location.href='article.html'" class="article">
-                <img src="img/thumb-id-1.png" alt="">
-                <div class="article__info article__info-creativity">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Creativity</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">One of the biggest questions I used to get asked by aspiring writers is how I
-                    get ideas. This tapered off after I wrote “the one process post to rule them all” (which was the
-                    goal, so… good), but the topic still pops every so often.
-
-                    To be honest, the “idea” question often seems a bit odd to me.
-                    It’s like asking, “when you’re hungry, how do you decide what to cook?” Like, I don’t know, man.
-                    You just do.
-                </p>
-
-            </article>
-
-            <article onclick="location.href='article.html'" class="article">
-                <img src="img/thumb-id-2.png" alt="">
-                <div class="article__info article__info-creativity">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Creativity</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">Letters overlap one another in the new logo for Spanish fashion retailer Zara,
-                    designed by French agency Baron & Baron, prompting criticism from fellow designers.
-                </p>
-
-            </article>
-
-            <article onclick="location.href='article.html'" class="article">
-                <img src="img/thumb-id-3.png" alt="">
-                <div class="article__info article__info-creativity">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Creativity</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">What does the above art installation mean?
-
-                    To be honest, the “idea” question often seems a bit odd to me.
-                    It’s like asking, “when you’re hungry, how do you decide what to cook?” Like, I don’t know, man.
-                    You just do
-
-
-                </p>
-
-            </article>
 
         </section>
 
@@ -221,6 +126,28 @@
         </div>
 
     </footer>
+    <template class="article">
+        <article class="article-home">
+            <img src="img/thumb-id-1.png" alt="">
+            <div class="article__info article__info-creativity">
+                <div class="article__info__box">
+                <h3 class="article__heading">What to do to get ideas</h3>
+                <h4 class="article__category">Creativity</h4>
+            </div>
+            </div>
+            <h4 class="article__author">By Jonathan Bel</h4>
+
+            <p class="article__text">One of the biggest questions I used to get asked by aspiring writers is how I
+                get ideas. This tapered off after I wrote “the one process post to rule them all” (which was the
+                goal, so… good), but the topic still pops every so often.
+
+                To be honest, the “idea” question often seems a bit odd to me.
+                It’s like asking, “when you’re hungry, how do you decide what to cook?” Like, I don’t know, man.
+                You just do.
+            </p>
+
+        </article>
+    </template>
 </body>
 
 </html>

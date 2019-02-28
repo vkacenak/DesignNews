@@ -20,7 +20,7 @@
                 </div>
         <nav class="desktop-nav">
             <div class="desktop-nav__left">
-                <a href="index.html"><img src="img/navbar/logo.png" alt="Design News" ></a>
+                <a href="index.html"><img id="logo" src="img/navbar/logo.png" alt="Design News" ></a>
             
 
         </div>
@@ -28,7 +28,10 @@
         <div class="desktop-nav__right">
             <a href="#">Log in</a>
             <button class="button-subscribe">Subscribe now</button>
-            <img src="img/navbar/search.png" alt="search" ">
+            <form class="search">
+                <input class="search__input" type="text" id="fname" name="fname" placeholder="Search">
+        </form>
+        <img class="searchButton" src="img/navbar/search.png" alt="search" onclick="SearchReveal()">
         </div>
         </nav>
         <div class="desktop-nav-articles">
@@ -69,6 +72,12 @@
             </div>
             
         </div>
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+                
+   </div>
             <div class="header">
                 <div class="header__headings">
                     <h1 class="header__logo">Desig<span style="color:white; font-weight:300;">news </span></h1>
@@ -79,100 +88,14 @@
 
 
     <main>
-        <section class="articles articles-recent">
+        <section class="articles-home">
             <h2 class="articles__heading">Most Recent</h2>
-         
+            
 
         </section>
-        <section class="articles articles">
+        <section class="articles-home">
             <h2 class="articles__heading">Most Popular</h2>
 
-            <article class="article-home">
-                <img src="img/thumb-id-1.png" alt="">
-                <div class="article__info article__info-art">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Visual Design</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">One of the biggest questions I used to get asked by aspiring writers is how I
-                    get ideas. This tapered off after I wrote “the one process post to rule them all” (which was the
-                    goal, so… good), but the topic still pops every so often.
-
-                    To be honest, the “idea” question often seems a bit odd to me.
-                    It’s like asking, “when you’re hungry, how do you decide what to cook?” Like, I don’t know, man.
-                    You just do.
-                </p>
-
-            </article>
-
-            <article class="article-home">
-                <img src="img/thumb-id-2.png" alt="">
-                <div class="article__info article__info-art">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Visual Design</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">Letters overlap one another in the new logo for Spanish fashion retailer Zara,
-                    designed by French agency Baron & Baron, prompting criticism from fellow designers.
-                </p>
-
-            </article>
-
-            <article class="article-home">
-                <img src="img/thumb-id-3.png" alt="">
-                <div class="article__info article__info-creativity">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Visual Design</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">One of the biggest questions I used to get asked by aspiring writers is how I
-                    get ideas. This tapered off after I wrote “the one process post to rule them all” (which was the
-                    goal, so… good), but the topic still pops every so often.
-
-                    To be honest, the “idea” question often seems a bit odd to me.
-                    It’s like asking, “when you’re hungry, how do you decide what to cook?” Like, I don’t know, man.
-                    You just do.
-                </p>
-
-            </article>
-
-            <article onclick="location.href='article.html'" class="article-home">
-                <img src="img/thumb-id-2.png" alt="">
-                <div class="article__info article__info-creativity">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Creativity</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">Letters overlap one another in the new logo for Spanish fashion retailer Zara,
-                    designed by French agency Baron & Baron, prompting criticism from fellow designers.
-                </p>
-
-            </article>
-
-            <article onclick="location.href='article.html'" onclick="location.href='article.html'" class="article-home">
-                <img src="img/thumb-id-3.png" alt="">
-                <div class="article__info article__info-creativity">
-                    <h3 class="article__heading">What to do to get ideas</h3>
-                    <h4 class="article__category">Creativity</h4>
-                </div>
-                <h4 class="article__author">By Jonathan Bel</h4>
-
-                <p class="article__text">What does the above art installation mean?
-
-                    To be honest, the “idea” question often seems a bit odd to me.
-                    It’s like asking, “when you’re hungry, how do you decide what to cook?” Like, I don’t know, man.
-                    You just do
-
-
-                </p>
-
-            </article>
 
         </section>
 
@@ -230,12 +153,14 @@
         </div>
 
     </footer>
-    <template onclick="location.href='article.html'">
-            <article class="article-home">
+    <template class="article">
+        <article class="article-home">
             <img src="img/thumb-id-1.png" alt="">
             <div class="article__info article__info-creativity">
+                <div class="article__info__box">
                 <h3 class="article__heading">What to do to get ideas</h3>
                 <h4 class="article__category">Creativity</h4>
+            </div>
             </div>
             <h4 class="article__author">By Jonathan Bel</h4>
 
@@ -247,34 +172,9 @@
                 It’s like asking, “when you’re hungry, how do you decide what to cook?” Like, I don’t know, man.
                 You just do.
             </p>
+
         </article>
-        </template>
-
-    <script>
-        const section = document.querySelector(".articles");
-        const template = document.querySelector("template").content;
-        const imgLink = "";
-        const pListLink = "";
-        const articlesLink = "https://spreadsheets.google.com/feeds/list/1zV1J-ryAejwmZMSujMgOOb4eeO6ppNUm0lECjl495FU/od6/public/values?alt=json";
-
-        function LoadJSON(){
-        fetch(articlesLink).then(result => result.json()).then(article => article.feed.entry.forEach(displayData))
-
-        }
-        function displayData(article) {
-            const clone = template.cloneNode(true);
-            clone.querySelector(".article__heading").textContent = article.gsx$heading.$t;
-            clone.querySelector(".article__category").textContent = article.gsx$category.$t;
-            clone.querySelector(".article__info").classList.add('.article__info-' + article.gsx$category.$t);
-            clone.querySelector(".article__author").textContent = article.gsx$author.$t;
-            clone.querySelector(".article__text").textContent = article.gsx$description.$t;
-      //      clone.querySelector(".article__img").src = imgLink + "small/" + article.gsx$image.$t + "-sm.jpg";
-       //     clone.querySelector(".article__img").alt = article.gsx$image.$t;
-            section.appendChild(clone);
-        }
- LoadJSON();
-    </script>
-
+    </template>
 </body>
 
 </html>
