@@ -14,12 +14,13 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
+    if (window.matchMedia("(min-width: 768px)").matches) {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         document.querySelector(".desktop-nav").style.height = "0";
     } else {
         document.querySelector(".desktop-nav").style.height = "10rem";
     }
-}
+}}
 
 // GET ID
 const params = new URLSearchParams(location.search)
