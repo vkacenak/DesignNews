@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700,900" rel="stylesheet">
-    <script src="js/script-article.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -18,30 +18,32 @@
                 <div id="burger-line-3" class="burger__menu--line"></div>
             </div>
         </div>
-        <nav class="desktop-nav">
-            <div class="desktop-nav__left">
-                <a href="index.html"><img id="logo" src="img/navbar/logo.png" alt="Design News"></a>
+        <nav>
+            <div class="desktop-nav">
+                <div class="desktop-nav__left">
+                    <a href="index.html"><img id="logo" src="img/navbar/logo.png" alt="Design News"></a>
 
 
+                </div>
+
+                <div class="desktop-nav__right">
+                    <a href="#">Log in</a>
+                    <button class="button-subscribe">Subscribe now</button>
+                    <form class="search">
+                        <input class="search__input" type="text" id="fname" name="fname" placeholder="Search">
+                    </form>
+                    <img class="searchButton" src="img/navbar/search.png" alt="search" onclick="SearchReveal()">
+                </div>
             </div>
-
-            <div class="desktop-nav__right">
-                <a href="#">Log in</a>
-                <button class="button-subscribe">Subscribe now</button>
-                <form class="search">
-                    <input class="search__input" type="text" id="fname" name="fname" placeholder="Search">
-                </form>
-                <img class="searchButton" src="img/navbar/search.png" alt="search" onclick="SearchReveal()">
+            <div class="desktop-nav-articles">
+                <a href="index.html">Home</a>
+                <a href="visual_design.html">Visual Design</a>
+                <a href="creativity.html">Creativity</a>
+                <a href="ux.html">UX</a>
+                <a href="art.html">Art</a>
             </div>
         </nav>
         <div class="desktop-nav-articles">
-            <a href="index.html">Home</a>
-            <a href="visual_design.html">Visual Design</a>
-            <a href="creativity.html">Creativity</a>
-            <a href="ux.html">UX</a>
-            <a href="art.html">Art</a>
-        </div>
-        <div class="mobile-nav-lines">
             <div class="mobile-nav-line"></div>
             <div class="mobile-nav-line"></div>
             <div class="mobile-nav-line"></div>
@@ -79,12 +81,12 @@
 
         </div>
         <div class="articles__header">
-            <h1 class="articles__header__heading">Creativity</h1>
+            <h1 class="articles__header__heading"></h1>
         </div>
     </header>
 
 
-    <main>
+    <main class="articlePage">
 
         <template class="article-template">
             <section class="article-content">
